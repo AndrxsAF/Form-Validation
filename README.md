@@ -1,21 +1,6 @@
-# IGWITHBOOTSTRAP
+# FORM-VALIDATION
 
-    Basic Instagram Feed made with ONLY Bootstrap component library, HTML and some CSS.
-
-    Doesn't have any functionality at all, it's only purpose is to mirror an example given by breatheco.de (https://github.com/breatheco-de/exercise-instagram-feed-bootstrap/blob/master/preview.gif).
-
-
-### Features
-- Contain Bootstrap libraries.
-- Responsive design.
-
-#### PostcardPreWork directory
-
-    BOOTSTRAPIG/
-            styles.css
-            index.html
-            README.md
-            server.py
+    Basic form validation checker.
 
 #### MADE BY ANDRÉS FRANCO (ANDRXSAF)
 
