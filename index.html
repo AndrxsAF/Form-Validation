@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container-fluid p-5">
+
+        <div class="container-fluid border">
+            <form>
+
+                <div class="row bg-primary p-2 border margin-custom">
+                    <p class="fs-4 m-0 mb-1 text-white">Payment for Example</p>
+                </div>
+
+                <div class="container-fluid p-0">
+
+                    <div id="alert" class="alert alert-danger d-none mt-3" role="alert">
+                        Some fields are missing!
+                    </div>
+
+                    <div class="row pt-2">
+                        <div class="col-5">
+                            <label for="number" class="form-label">Card #</label>
+                            <input type="number" class="form-control" id="number" placeholder="XXXXXXXXXXXXXXXX">  
+                        </div>
+                        <div class="col-3"> 
+                            <label for="cvc" class="form-label">CVC #</label>
+                            <input type="number" class="form-control" id="cvc" placeholder="0000">    
+                        </div>
+                        <div class="col-4">
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="amount" placeholder="$$$">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col pt-2">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="ex. Andrés">
+                        </div>
+                        <div class="col pt-2">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="ex. Franco">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 pt-2">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="ex. Miami">
+                        </div>
+                        <div class="col pt-2">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="ex. Florida">
+                        </div>
+                        <div class="col pt-2">
+                            <label for="postal" class="form-label">Postal Code</label>
+                            <input type="text" class="form-control" id="postal" placeholder="ex. 33166">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col pt-2">
+                            <label for="exampleFormControlInput1" class="form-label">We accept:</label>
+                            <div class="d-flex">
+                                <div class="form-check d-flex align-items-center p-1">
+                                    <input class="form-check-input m-2 ms-0" type="radio" name="issuer" id="diners" value="0">
+                                    <img class="img-fluid" src="https://img.icons8.com/ios/50/000000/diners-club.png"/>
+                                </div>
+                                <div class="form-check d-flex align-items-center p-1">
+                                    <input class="form-check-input m-2" type="radio" name="issuer" id="amex" value="1">
+                                    <img class="img-fluid" src="https://img.icons8.com/ios/50/000000/amex.png"/>
+                                </div>
+                                <div class="form-check d-flex align-items-center p-1">
+                                    <input class="form-check-input m-2" type="radio" name="issuer" id="mastercard" value="2">
+                                    <img class="img-fluid" src="https://img.icons8.com/windows/50/000000/mastercard.png"/>
+                                </div>
+                                <div class="form-check d-flex align-items-center p-1">
+                                    <input class="form-check-input m-2" type="radio" name="issuer" id="visa" value="3">
+                                    <img class="img-fluid" src="https://img.icons8.com/ios/50/000000/visa.png"/>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col pt-2 pb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-light p-3 margin-custom border">
+                    <input class="btn btn-secondary" id="reset" type="reset" value="Reset">
+                    <input class="btn btn-primary" id="enviar" type="submit" value="Submit">
+                </div>
+            </form>
+
+            
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/app.js"></script>
+</body>
+</html>
