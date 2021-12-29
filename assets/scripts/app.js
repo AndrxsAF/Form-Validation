@@ -1,59 +1,57 @@
-const card = document.querySelector('#number')
-const cvc = document.querySelector('#cvc')
-const amount = document.querySelector('#amount')
-const firstName = document.querySelector('#firstName')
-const lastName = document.querySelector('#lastName')
-const city = document.querySelector('#city')
-const state = document.querySelector('#state')
-const postal = document.querySelector('#postal')
-const message = document.querySelector('#message')
+// const card = document.querySelector('#number')
+// const cvc = document.querySelector('#cvc')
+// const amount = document.querySelector('#amount')
+// const firstName = document.querySelector('#firstName')
+// const lastName = document.querySelector('#lastName')
+// const city = document.querySelector('#city')
+// const state = document.querySelector('#state')
+// const postal = document.querySelector('#postal')
+// const message = document.querySelector('#message')
 let issuer = document.getElementsByName('issuer');
-const enviar = document.querySelector('#enviar')
-const reset = document.querySelector('#reset')
+const bottonSend = document.querySelector('#bottonSend')
+const bottonReset = document.querySelector('#bottonReset')
 const alert = document.querySelector('#alert')
+const mainForm = document.querySelector('#mainForm')
 
-let chequeador = false
+let checked = false
 let issuer_value
-let arr = []
-const chequeo = event => {
+
+const checker = event => {
     event.preventDefault()
-    arr.push(card, cvc, amount, firstName, lastName, city, state, postal, message)
-    arr.map(index => {
+    for (let i = 0; i < 13; i++){
         alert.classList.add("d-none")
-        if(index.value == ''){
-            index.classList.add("bg-custom")
+        if(mainForm.elements[i].value == ''){
+            mainForm.elements[i].classList.add("bg-custom")
             alert.classList.remove("d-none") 
         } else {
-            index.classList.remove("bg-custom")
+            mainForm.elements[i].classList.remove("bg-custom")
         }
-    })
+    }
+
     for (i in issuer) {
         if (issuer[i].checked){
-            chequeador = true
+            checked = true
             issuer_value = i
         }
     }
-    if (!chequeador){
+    if (!checked){
         alert.classList.remove("d-none") 
     }
-    arr = []
 }
 
-const reiniciar = event => {
+const reset = event => {
     event.preventDefault()
     alert.classList.add("d-none")
-    arr.push(card, cvc, amount, firstName, lastName, city, state, postal, message)
-    arr.map(index => {
-        index.classList.remove("bg-custom")
-        index.value = ''
-    })
+    for (let i = 0; i < 13; i++){
+        mainForm.elements[i].classList.remove("bg-custom")
+        mainForm.elements[i].value = ''
+    }
     for (i in issuer) {
         if (issuer[i].checked){
             issuer[i].checked = false
         }
     }
-    arr = []
 }
 
-enviar.addEventListener("click", chequeo)
-reset.addEventListener("click", reiniciar)
+bottonSend.addEventListener("click", checker)
+bottonReset.addEventListener("click", reset)
