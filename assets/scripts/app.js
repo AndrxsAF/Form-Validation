@@ -1,18 +1,8 @@
-// const card = document.querySelector('#number')
-// const cvc = document.querySelector('#cvc')
-// const amount = document.querySelector('#amount')
-// const firstName = document.querySelector('#firstName')
-// const lastName = document.querySelector('#lastName')
-// const city = document.querySelector('#city')
-// const state = document.querySelector('#state')
-// const postal = document.querySelector('#postal')
-// const message = document.querySelector('#message')
 let issuer = document.getElementsByName('issuer');
 const bottonSend = document.querySelector('#bottonSend')
 const bottonReset = document.querySelector('#bottonReset')
 const alert = document.querySelector('#alert')
 const mainForm = document.querySelector('#mainForm')
-
 let checked = false
 let issuer_value
 
@@ -27,7 +17,6 @@ const checker = event => {
             mainForm.elements[i].classList.remove("bg-custom")
         }
     }
-
     for (i in issuer) {
         if (issuer[i].checked){
             checked = true
